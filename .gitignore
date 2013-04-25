@@ -3,6 +3,7 @@
 *.vssscc
 *.vspscc
 *.scc
+*.nupkg
 upgradelog*.xml
 _UpgradeReport_Files
 Backup

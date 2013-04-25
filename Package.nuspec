@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Common.Logging.Raven</id>
+        <version>1.0.0</version>
+        <title>Common.Logging.Raven</title>
+        <authors>Usetech</authors>
+        <owners>Usetech</owners>
+        <projectUrl>https://github.com/Usetech/Common.Logging.Raven</projectUrl>
+        <iconUrl>https://www.getsentry.com/_static/getsentry/images/favicon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Provider for Common.Logging Library to Sentry Raven</description>
+        <releaseNotes>First Version.</releaseNotes>
+        <copyright>Copyright 2013</copyright>
+        <tags>Log Sentry Raven ILog Logging</tags>
+        <dependencies>
+            <dependency id="Common.Logging" version="2.1.2" />
+            <dependency id="Newtonsoft.Json" version="5.0.4" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="content\app.config.transform" target="content\app.config.transform" />
+        <file src="content\web.config.transform" target="content\web.config.transform" />
+        <file src="Common.Logging.Raven\bin\Release\net35\Common.Logging.Raven.dll" target="lib\net35\Common.Logging.Raven.dll" />
+        <file src="Common.Logging.Raven\bin\Release\net35\Common.Logging.Raven.pdb" target="lib\net35\Common.Logging.Raven.pdb" />
+        <file src="Common.Logging.Raven\bin\Release\net40\Common.Logging.Raven.dll" target="lib\net40\Common.Logging.Raven.dll" />
+        <file src="Common.Logging.Raven\bin\Release\net40\Common.Logging.Raven.pdb" target="lib\net40\Common.Logging.Raven.pdb" />
+        <file src="Common.Logging.Raven\bin\Release\net45\Common.Logging.Raven.dll" target="lib\net45\Common.Logging.Raven.dll" />
+        <file src="Common.Logging.Raven\bin\Release\net45\Common.Logging.Raven.pdb" target="lib\net45\Common.Logging.Raven.pdb" />
+    </files>
+</package>

@@ -2,14 +2,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.Raven.Test", "Common.Logging.Raven.Test\Common.Logging.Raven.Test.csproj", "{5183EE19-B1EE-4D57-B764-26259EB2B5BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.Raven", "Common.Logging.Raven\Common.Logging.Raven.csproj", "{CAD7DFFC-38CB-41AC-AB82-5FE494CC7E5A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9E9D5D4C-6E40-42E3-8B92-D49127D63B90}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.Raven.net35", "Common.Logging.Raven\Common.Logging.Raven.net35.csproj", "{CAD7DFFC-38CB-41AC-AB82-5FE494CC7E5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

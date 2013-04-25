@@ -5,16 +5,6 @@
       <section name="logging" type="Common.Logging.ConfigurationSectionHandler, Common.Logging"/>
     </sectionGroup>
   </configSections>
-  
-  <runtime>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="Common.Logging" publicKeyToken="af08829b84f0328e" culture="neutral"/>
-        <bindingRedirect oldVersion="0.0.0.0-2.1.2.0" newVersion="2.1.2.0"/>
-      </dependentAssembly>
-    </assemblyBinding>
-  </runtime>
-  
   <common>
     <logging>
       <factoryAdapter type="Common.Logging.Raven.RavenLoggingFactoryAdapter, Common.Logging.Raven">
@@ -24,4 +14,4 @@
       </factoryAdapter>
     </logging>
   </common>
-<startup><supportedRuntime version="v2.0.50727"/></startup></configuration>
+</configuration>
