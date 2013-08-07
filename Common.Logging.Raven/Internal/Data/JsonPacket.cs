@@ -1,4 +1,5 @@
 using System;
+using System.Web;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
@@ -85,6 +86,9 @@ namespace Common.Logging.Raven.Internal.Data
         [JsonProperty("sentry.interfaces.Stacktrace", NullValueHandling = NullValueHandling.Ignore)]
         public SentryStacktrace StackTrace { get; set; }
 
+        [JsonProperty("sentry.interfaces.Http", NullValueHandling = NullValueHandling.Ignore)]
+        public SentryHttp Http { get; set; }
+
         public JsonPacket(string project, Exception e, string logger, string level)
         {
             ServerName = Environment.MachineName;
@@ -101,6 +105,18 @@ namespace Common.Logging.Raven.Internal.Data
             if (e.TargetSite != null) Culprit = String.Format("{0} in {1}", e.TargetSite.ReflectedType.FullName, e.TargetSite.Name);
             Exception = new SentryException(e) { Module = e.Source, Type = e.GetType().Name, Value = e.Message };
             StackTrace = new SentryStacktrace(e);
+
+            var httpContext = HttpContext.Current;
+            if (httpContext != null)
+            {
+                Http = new SentryHttp
+                    {
+                        Method = httpContext.Request.HttpMethod,
+                        QueryString = httpContext.Request.QueryString.ToString(),
+                        Url = httpContext.Request.Url.ToString()
+                    };
+            }
+
             if (StackTrace.Frames.Count == 0) StackTrace = null;
         }
 

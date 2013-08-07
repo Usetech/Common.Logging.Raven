@@ -76,10 +76,7 @@ namespace Common.Logging.Raven.Internal
                 {
                     if (rs != null)
                         using (var sw = new StreamReader(rs)) messageBody = sw.ReadToEnd();
-                }
-
-                if (messageBody != null)
-                    Trace.WriteLine("[MESSAGE BODY] " + messageBody);
+                }                
             }
         }
 
