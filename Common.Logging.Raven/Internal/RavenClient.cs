@@ -71,11 +71,13 @@ namespace Common.Logging.Raven.Internal
             } 
             catch (WebException e) 
             {
-                string messageBody = null;
+                string messageBody = "no details";
                 using (var rs = e.Response.GetResponseStream())
                 {
                     if (rs != null)
                         using (var sw = new StreamReader(rs)) messageBody = sw.ReadToEnd();
+                    Trace.WriteLine("SENTRY LOGGING ERROR:");
+                    Trace.Write(messageBody);
                 }                
             }
         }
