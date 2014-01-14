@@ -72,10 +72,17 @@ namespace Common.Logging.Raven.Internal
             catch (WebException e) 
             {
                 string messageBody = null;
-                using (var rs = e.Response.GetResponseStream())
+                if (e.Response != null)
                 {
-                    if (rs != null)
-                        using (var sw = new StreamReader(rs)) messageBody = sw.ReadToEnd();
+                    using (var rs = e.Response.GetResponseStream())
+                    {
+                        if (rs != null)
+                            using (var sw = new StreamReader(rs)) messageBody = sw.ReadToEnd();
+                    }
+                }
+                else
+                {
+                    messageBody = e.Message;
                 }
 
                 if (messageBody != null)
