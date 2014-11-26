@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Common.Logging.Raven</id>
-        <version>1.0.0</version>
+        <version>2.3.1</version>
         <title>Common.Logging.Raven</title>
         <authors>Usetech</authors>
         <owners>Usetech</owners>
@@ -10,12 +10,12 @@
         <iconUrl>https://www.getsentry.com/_static/getsentry/images/favicon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Provider for Common.Logging Library to Sentry Raven</description>
-        <releaseNotes>First Version.</releaseNotes>
-        <copyright>Copyright 2013</copyright>
+        <releaseNotes>Update to support latest Common.Logging.</releaseNotes>
+        <copyright>Copyright 2014</copyright>
         <tags>Log Sentry Raven ILog Logging</tags>
         <dependencies>
-            <dependency id="Common.Logging" version="2.1.2" />
-            <dependency id="Newtonsoft.Json" version="5.0.4" />
+            <dependency id="Common.Logging" version="2.3.1" />
+            <dependency id="Newtonsoft.Json" version="6.0.3" />
         </dependencies>
     </metadata>
     <files>
